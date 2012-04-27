@@ -107,4 +107,11 @@
 		<developerConnection>scm:git:git@github.com:cezary-biernacki/t5conduit.git</developerConnection>
 	</scm>
 
+	<distributionManagement>
+		<snapshotRepository>
+			<id>b2b-3rd-snapshots</id>
+			<url>http://prerov.b2bcentrum.cz/maven-proxy/content/repositories/b2b-3rd-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
