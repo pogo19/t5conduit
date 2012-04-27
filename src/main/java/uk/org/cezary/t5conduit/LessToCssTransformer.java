@@ -122,7 +122,8 @@ public class LessToCssTransformer implements ResourceTransformer {
         
         try {
             ScriptableObject scope = context.initStandardObjects();
-            scope.put("support", scope, this);
+            Object support = Context.javaToJS(this, scope);
+            scope.put("support", scope, support);
             EnvironmentDummy.init(scope);
             
             context.evaluateString(scope, "function print(txt) { return support.printFromParser(txt); };", "init", 2, null);
